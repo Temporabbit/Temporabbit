@@ -1,37 +1,332 @@
-## Welcome to GitHub Pages
+## HTML基本知识
 
-You can use the [editor on GitHub](https://github.com/Temporabbit/Temporabbit/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+#### 1.HTML简介
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+Hyper Text Markup Language
+超文本标记语言
+主要通过HTML标记对网页中的文本、图片、按钮等内容进行描述
+学习HTML就是学习标签、标记和元素
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+#### 2.常用快捷键
 
-### Jekyll Themes
+```
+ctrl+y重做
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Temporabbit/Temporabbit/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### 3.基本标签简介
+
+>1.```<h1>```标题，包括h1,h2,h3,h4等
+>
+>2.```< a href="url"></a>```链接   
+>
+>3.```<!DOCTYPE html>```文档类型的声明，让浏览器按照相应版本的HTML进行解析。这一个为HTML5的协议头，默认就是HTML协议头。
+>
+>HTML4的协议头为```<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">```。
+>
+>XHTML的协议头为：```<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">```。
+>
+>其中HTML4<XHTML<HTML5
+>
+>4.```<html></html>```网页的根标签,所有其它的标签都被包含
+>
+>5.```<head></head>```头部标签,关于网页的一些配置信息。
+>
+>6.```<meta charset="utf-8"/>```字符集设置或者叫编码设置
+>
+><img src="D:\尚硅谷\笔记\html+css\imgs\3.png" style="zoom:75%;" />
+>
+>7.```<title></title>```标题标签。一个网站对应有一个ip，域名对应一个ip。
+>
+>8.```<body></body>``` 主体标签,所有在浏览器中显示的其他的内容和标签都被包含
+
+#### 4.发展史
+
+![](D:\尚硅谷\笔记\html+css\imgs\2.png)
+
+```
+2000年的xhtml为严格型版本，04年提出html5不单单对语法规范
+html5新增加了本地存储，可以在浏览器端加一些东西。增加了绘制图形，音频视频功能以及地理位置。
+html4可以用来写PC低端（IE678），HTML5可以用来写高级浏览器（目前主流的）。没有要求就用HTML5，移动端用HTML5和CSS3。
+H5专业是一个泛指，指的是移动端的意思
+```
+
+#### 5.seo搜索引擎优化
+
+```<meta name="keywords" content="helloworld" />```关键词
+
+```<meta name="description" content="helloworld" />```描述信息
+
+让爬虫搜索到的关键词和描述信息
+
+#### 6.标签的类型
+
+>双标签：有开始有闭合```<body></body>```
+>
+>单标签（自结束标签）：```<meta>```可以在结尾写/HTML5可以不写
+
+#### 7.标签的关系
+
+>嵌套关系：包含关系
+>
+>并列关系：同级关系（快捷键：ctrl+k快速整理代码格式）
+
+#### 8.html基本标签
+
+```
+h1-h6: 标题标签
+hr:水平线标签
+p: 段落标签
+br:换行标签
+<!-- 注释信息 快捷键: ctrl+/ -->
+```
+
+#### 9.图片标签
+
+```<img>图片标签
+<img>属性：属性名对应属性值的形式，也叫键值对，key/velue，k/v
+src：图片的路径
+width：图片的宽度 单位是像素，当单独分别设置宽度或高度时，宽高会等比例缩放
+height：同上
+border：图片边框
+title：提示文本
+alt：替换文本，当图片不存在时，进行提示```
+```
+
+#### 10.路径
+
+路径：网页和其他文件的位置关系。路径忽略大小写。注意不要使用中文。
+
+###### 相对路径：
+
+```
+1.同级相对路径：网页和其他文件在一个目录下
+2.上一级相对路径：使用../。需要跳出文件夹找其他文件
+3.下一级相对路径：其他文件进入到另一个目录下，需要准确写出目录名
+```
+
+###### 绝对路径
+
+```
+文件在磁盘中的物理位置
+1.绝对路径的路径在描写时与相对路径不一样，使用"\"也可以。
+2.出于安全的考虑，浏览器不能直接通过绝对路径访问磁盘中的文件，但是可以通过网站的绝对地址访问文件。
+```
+
+#### 11.超链接标签
+
+```
+<a>标签
+<a href="url" target="...">内容</a>
+target：_self默认值 从当前选项卡直接跳转至目标页
+		_blank重新打开一个选项卡跳转到目标页
+```
+
+HBuilder操作：
+
+```
+ctrl+上下键：代码上下挪动
+ctrl+滚轮：字体大小
+```
+
+#### 12.图片与背景
+
+```
+图片：占用位置
+背景：不占用位置bgcolor背景色，background背景图。超出的画幅不会带有滚动条
+一般设置背景不在html文件，在css文件设置。背景可以理解为属性，不占用位置。背景的尺寸与标签的尺寸无关。
+```
+
+#### 13.空链接和锚点链接
+
+```
+空链接：如果不知道跳转至哪个网站，可以使用href="#"或"##"。前者会跳转至顶部，第二个没有反应。
+锚点链接：在网站内部进行跳转，给目标标签设置id属性，a标签中的href="#{id名称}"。点击即可返回到目标标签。
+```
+
+#### 14.列表
+
+###### 14.1无序列表
+
+```
+被一组ul管理，li列表项，ul只能包含li，li可以包含其他标签。
+前面有一组小黑点。
+```
+
+###### 14.2有序列表
+
+```
+被<ol>管理，里面为<li>
+前面为序号
+```
+
+###### 14.3自定义列表
+
+```
+被<dl>管理，dt为主题，dd为子内容。dl只能包含dt和dd，dt和dd可以包含其他标签
+```
+
+#### 15.表格
+
+```
+table 表格标签
+tr	行标签
+td	单元格标签 列默认是以当前列中最宽的为基准
+th	表头标签 内容水平居中且加粗
+cellspacing	单元格与单元格之间的距离
+align	left(默认)居左/center 居中/right 居右。最多应用到tr，其余可以使用css或者js循环输出。
+colspan	跨列合并单元格
+rowspan 跨行合并单元格
+caption	表格标题，居中正上方
+```
+
+表格练习：
+
+![](D:\尚硅谷\笔记\html+css\imgs\QQ图片20211126190422.png)
+
+#### 16.表单
+
+```
+<label>	表单标签
+	属性：
+		for 关联表单中的id值
+<input>	输入
+	属性：
+	type 类型
+		text输入框
+		password密码框
+		radio单选按钮
+			name 组的概念，将多个单选的radio设置相同的name就可以实现单选
+			checked 默认选中 1.checked="checked" 2.checke="" 3.checked
+		checkbox 复选框
+			属性
+				checked
+		button 普通按钮
+		submit 提交按钮
+		reset 重置按钮（和刷新不一样，相当于给服务器重新发送一次申请）
+<select> 下拉菜单
+	标签
+		option 下拉项
+		optgroup 下拉组
+			label 下拉组标题
+	属性
+		selected 默认选中，和checked一样
+<textarea> 文本域
+<form> 提交表单  将所有被提交的标签包含其中提交数据
+	属性
+		action 提交地址
+		method 提交方式：get/post
+<button>按钮
+	type
+		button 普通按钮
+		submit 提交按钮
+		reset 重置按钮
+```
+
+列表>表格>表单
+
+#### 17.标签学习2
+
+```
+右侧更加强调语义，标签基本都具备一定的语义，爬虫会根据语义标签来获得文本信息
+图标用左侧，表达文本用右侧（上面两个用的比较多一些）
+```
+
+<img src="D:\尚硅谷\笔记\html+css\imgs\QQ图片20211126212327.png" style="zoom:70%;" />
+
+#### 18.特殊字符
+
+```
+1.在文本中，两头输入空格会忽略，中间的空格只能识别一个。
+2.如果在浏览器中想要直接输出标签而不是让他识别，就需要用到以下的特殊字符标记中的大于号和小于号
+```
+
+<img src="D:\尚硅谷\笔记\html+css\imgs\5.png" style="zoom:75%;" />
+
+#### 19.CSS体验
+
+```
+1.CSS位置：在html中<head>标签中可以使用<style>标签对当前页进行css编写
+2.标签选择器：<标签>{}
+3.chrome默认字号：16.正常400或者normal 加粗一般用700或bold
+4.首行缩进：text-indent 使用单位：em（2em等于当前两个字号的大小）
+```
+
+#### 20.chrome调试
+
+```
+1.调试css：有叹号代表属性名或者属性值语法错误。即兴调试：可以选择性的调试，也可以直接在控制器进行修改。
+2.错误调试最好看chrome中的检查。
+```
+
+#### 21.设置颜色的几种方式
+
+```
+1.十进制方式：rgb(xxx,xxx,xxx)三原色取值范围0-255
+2.单词：color
+3.十六进制：#FF0000 0-ff（255）
+```
+
+#### 22.盒子
+
+```
+1.标签<div>：没有语义，span也没有语义
+2.盒子（标签）的基本三属性：宽度weight，高度height，背景色：background
+```
+
+#### 23.显示模式
+
+````
+1.块级显示模式：独占一行，设置宽高起作用，在没有设置固定宽度时，和父元素的宽度一样
+块级元素：html,body,div,h1-h6,p,ul,ol,li,dl,dt,dd,hr,form
+2.行内显示模式：一行有多个，设置宽高不起作用，尺寸由内容决定，没有内容时宽高为0。当行内元素之间有一个或者多个的空格时，显示效果会有默认间距。
+行内元素：span,a,b,strong,i,em,u,ins,s,del
+3.行内块显示模式：一行中有多个，设置宽高起作用
+行内块元素：img 表单标签
+
+23均沿着元素的基线对齐
+````
+
+#### 24.显示模式转换
+
+```
+display属性
+	inline-block转成行内块
+	block转成块级（用的最多）
+div转成一行一般使用浮动
+```
+
+#### 25.标签选择器
+
+```
+调用：在标签中使用<class>属性调用
+定义：.+类名称
+命名规范：不能用数字开头，可以用字母或者下划线开头，加上字母、数字、下划线、中划线
+驼峰命名法：第一个单词首字母小写，从第二个单词开始首字母大写
+代码冗余：当一个代码片段重复性粘贴时，会造成代码执行效率低下
+多类名调用：在标签中中间空格可以调用多个类名
+```
+
+<img src="D:\尚硅谷\笔记\html+css\imgs\QQ图片20211129154602.png" style="zoom:75%;" />
+
+#### 26.id选择器
+
+```
+不可以被多个标签调用，一对一，就像身份证。一般在js里使用。
+定义id名称：用#开头+id名称：#one。
+调用id名称：id属性等于id名称，命名规范与类名一样。
+```
+
+#### 27.CSS三种书写位置
+
+```
+1.内嵌式：将CSS代码嵌入到html文件中，CSS代码和html代码相对分离，代码耦合度相对较低。在工作中偶尔使用。
+2.行内式：在body中代码标签里写style，不使用选择器，将CSS代码写在html中，两种代码掺杂在一起。代码耦合度很高，会有代码冗余，难以维护。在工作中偶尔使用。
+3.外链式：单独创造CSS文件，链接时在head使用link链接。css代码和html绝对分离，代码耦合度极低。在工作中经常使用。
+<link rel="stylesheet" type="text/css" href="xxxx"/>
+```
+
+#### 
